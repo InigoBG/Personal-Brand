@@ -113,7 +113,7 @@ export const STRINGS = {
     "exp.2.dates": "May 2025 – Jan 2026",
     "exp.2.role": "Co-founder · Sales and backend",
     "exp.2.story": "Legal AI that began as a retrieval (RAG) tool and became an agentic workflow. It drafted first versions of SPAs and SHAs from the firm's own documents, for lawyer review. I owned sales and built the backend; my co-founder built the interface and reviewed the code.",
-    "exp.funnel.h": "Agentic Labs · outreach to pilots",
+    "exp.funnel.h": "Agentic Labs · first contact to pilots",
     "exp.funnel.1": "law firms contacted",
     "exp.funnel.2": "at least half met",
     "exp.funnel.3": "concurrent paid pilots",
