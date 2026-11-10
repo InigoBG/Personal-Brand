@@ -2,7 +2,6 @@ import { applyLang, t } from './i18n.js';
 import { initFrames } from './scroll.js';
 import { initHero } from './hero.js';
 import { initDemo } from './demo.js';
-import { initPipeline } from './pipeline.js';
 import { initLatam } from './latam.js';
 import * as MAP from './map-data.js';
 import { DEMO, LATAM_TIERS } from './content.js';
@@ -60,7 +59,6 @@ function boot() {
   initFrames({
     hero: initHero(frame('hero')),
     demo: initDemo(frame('demo'), DEMO),
-    how: initPipeline(frame('how')),
     latam: initLatam(frame('latam'), MAP, LATAM_TIERS),
   });
 
@@ -92,17 +90,6 @@ function boot() {
   const copy = document.getElementById('copy');
   copy.addEventListener('click', () => copyEmail(copy, document.getElementById('email').textContent.trim()));
 
-  const clock = document.getElementById('clock');
-  const fmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Madrid', hour: '2-digit', minute: '2-digit' });
-  const tick = () => { clock.textContent = fmt.format(new Date()); };
-  tick(); setInterval(tick, 30000);
-
-  const chapter = document.getElementById('chapter');
-  const secs = document.querySelectorAll('main > section[data-chapter]');
-  const io = new IntersectionObserver((entries) => {
-    for (const e of entries) if (e.isIntersecting) chapter.textContent = `${e.target.dataset.chapter} / 08`;
-  }, { rootMargin: '-40% 0px -55% 0px' });
-  secs.forEach((s) => io.observe(s));
 }
 
 if (typeof document !== 'undefined') boot();

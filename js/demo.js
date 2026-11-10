@@ -18,7 +18,7 @@ export function redFlags({ contracts }) {
   const hi = contracts.filter((c) => c.cells.coc[0] === 'hi');
   return [
     `${hi.length} of ${contracts.length} contracts have a change-of-control trigger: acceleration, termination, deemed assignment or a call option.`,
-    ...hi.slice(0, 3).map((c) => `${c.short} \u2014 ${c.cells.coc[2]}: ${GLOSS[c.id] ?? 'high-risk trigger'}`),
+    ...hi.map((c) => `${c.short} \u2014 ${c.cells.coc[2]}: ${GLOSS[c.id] ?? 'high-risk trigger'}`),
   ];
 }
 
@@ -30,7 +30,7 @@ export function initDemo(root, DEMO) {
 
   grid.innerHTML = `<table><thead><tr><th scope="col">Contract</th>${qs.map((q) => `<th scope="col">${esc(q.label)}</th>`).join('')}</tr></thead><tbody>${
     cs.map((c, r) => `<tr><th scope="row">${esc(c.short)}<span>${c.pages} pp</span></th>${qs.map((q, k) => {
-      const [risk, ans, ref] = c.cells[q.id];
+      const [risk, , ref] = c.cells[q.id], ans = c.brief[q.id]; // the full answer is in the detail panel
       return `<td><button type="button" class="cell" data-r="${r}" data-c="${k}" aria-label="${esc(c.short)}, ${esc(q.label)}" aria-describedby="cell-${r}-${k}"><span class="cell-in" id="cell-${r}-${k}"><span class="ans">${esc(ans)}</span><span class="meta">${dot(risk)}${esc(ref)}</span></span></button></td>`;
     }).join('')}</tr>`).join('')}</tbody></table>`;
   memo.innerHTML = `<p class="kicker">Red-flag memo · change of control</p><ul>${redFlags(DEMO).map((l, i) => i ? `<li>${esc(l)}</li>` : `<li class="lead">${esc(l)}</li>`).join('')}</ul>`;
