@@ -29,7 +29,7 @@ export function initLatam(root, data, tiers) {
     help.dataset.on = helpOn(p);
   };
 
-  root.querySelector('[data-print]').addEventListener('click', () => {
+  root.querySelector('[data-print]')?.addEventListener('click', () => {
     html.classList.add('print-latam');
     render(last);
     print();

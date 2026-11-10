@@ -67,7 +67,8 @@ button{font:inherit;color:inherit;cursor:pointer}
   .tools{gap:var(--s2);margin-left:auto}
   .links{order:3;flex:0 0 100%;flex-wrap:nowrap;overflow-x:auto;gap:var(--s4);scrollbar-width:none;padding-right:var(--s6);
     -webkit-mask-image:linear-gradient(to right,#000 calc(100% - var(--s6)),transparent);mask-image:linear-gradient(to right,#000 calc(100% - var(--s6)),transparent)} /* fade: more links to the right */
-  .links a{white-space:nowrap;padding-block:var(--s2)}
+  .links{gap:var(--s3)}
+  .links a{white-space:nowrap;padding-block:var(--s2);font-size:11px}
   .name{font-size:16px}
 }
 @media (pointer:coarse){.tools button,.btn{min-height:44px;min-width:44px;justify-content:center}}
@@ -415,6 +416,7 @@ html[data-motion=static] .map,[data-frame=latam][data-fit=no] .map{--tilt:0deg} 
 .proj-desc{grid-area:desc;max-width:54ch}
 .proj .tags{grid-area:tags;padding-top:2px}
 .other > * + *{margin-top:var(--s2)}
+.other p{max-width:var(--text)}
 .projs-s{margin-top:var(--s4);border-bottom-color:var(--line)}
 .projs-s .proj{grid-template-areas:"name desc tags";grid-template-rows:auto;padding-block:var(--s3);border-top-color:var(--line);font-size:14.5px}
 .projs-s h4{font-size:19px;line-height:1.25}
