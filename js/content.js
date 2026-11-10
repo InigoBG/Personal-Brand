@@ -21,7 +21,7 @@ export const DEMO = {
   contracts: [
     {
       id: 'loan', name: "Préstamo sindicado · Banco Ibérico y otros", short: "Préstamo sindicado", pages: 58,
-      brief: {"coc": "Sí: vencimiento anticipado", "ces": "La acreditada no puede ceder", "ley": "Ley española · Madrid", "lim": "Indemnidad sin límite", "dur": "30/06/2028 · ratio ≤ 3,00x"},
+      brief: {"coc": "Sí: vencimiento anticipado", "ces": "La acreditada no puede ceder", "ley": "Ley española · Madrid", "lim": "Sin límite · indemnidad amplia", "dur": "30/06/2028 · ratio ≤ 3,00x"},
       cells: {
         coc: ["hi","Sí. Es supuesto de vencimiento anticipado si un tercero adquiere el control sin consentimiento de la Mayoría de Prestamistas.","Cl. 21.1(f)","Constituirá Supuesto de Vencimiento Anticipado que {{cualquier persona o grupo de personas actuando de forma concertada adquiera el Control de la Acreditada}} sin el consentimiento previo de la Mayoría de las Entidades Acreditantes."],
         ces: ["mid","La acreditada no puede ceder. Las entidades sí, a otras entidades de crédito.","Cl. 27.2","La Acreditada {{no podrá ceder ni transmitir sus derechos u obligaciones}} bajo el presente Contrato. Las Entidades Acreditantes podrán ceder su posición a cualquier entidad de crédito."],

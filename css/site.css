@@ -168,7 +168,7 @@ html.js[data-motion=full] #top .frame-panel{display:grid;align-items:center;padd
 .sides{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s6)}
 .side{border-top:2px solid var(--ink);padding-top:var(--s4)}
 .side h3{margin-top:var(--s2);font-size:clamp(26px,2.6vw,32px)}
-.side h3 + p{margin-top:var(--s3);max-width:36ch}
+.side h3 + p{margin-top:var(--s3);max-width:36ch;text-wrap:balance}
 .about-foot{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s6) var(--s8);align-items:start}
 .glance{background:var(--sheet);border:1px solid var(--line-strong);padding:var(--s5)}
 .glance dl{display:grid;grid-template-columns:auto 1fr;gap:var(--s3) var(--s4);margin:var(--s4) 0 0;font-size:14.5px}
@@ -275,6 +275,7 @@ html.js[data-motion=full] #demo .frame-panel{display:grid;align-items:center;pad
 
 /* 05 how it works */
 .how{display:grid;gap:var(--s4)}
+.how > .muted{max-width:75ch}
 .steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s4)}
 .steps li{border-top:2px solid var(--ink);padding-top:var(--s3)}
 .steps .n{font-size:12px;color:var(--muted)}
@@ -282,7 +283,7 @@ html.js[data-motion=full] #demo .frame-panel{display:grid;align-items:center;pad
 .steps p{font-size:14.5px}
 .steps details{margin-top:var(--s3);font-size:12.5px}
 #how h2{font-size:clamp(24px,2.6vw,34px)}
-.steps summary::before{content:"+";color:var(--stamp)}
+.steps summary::before{content:"+";color:var(--stamp);font-weight:500;font-size:13px}
 .steps details[open] summary::before{content:"–"}
 .steps summary{list-style:none;cursor:pointer;font-family:var(--f-mono);font-size:11.5px;min-height:32px;display:flex;align-items:center;gap:var(--s2)}
 .steps pre{margin:var(--s2) 0 0;padding:var(--s3);background:var(--sheet);border:1px solid var(--line);overflow-x:auto;font-family:var(--f-mono);font-size:11px;line-height:1.5}
