@@ -29,7 +29,7 @@ export function initDemo(root, DEMO) {
   const memo = root.querySelector('[data-memo]');
 
   grid.innerHTML = `<table><thead><tr><th scope="col">Contract</th>${qs.map((q) => `<th scope="col">${esc(q.label)}</th>`).join('')}</tr></thead><tbody>${
-    cs.map((c, r) => `<tr><th scope="row">${esc(c.short)}<span>${c.pages} pp</span></th>${qs.map((q, k) => {
+    cs.map((c, r) => `<tr><th scope="row">${esc(c.short)}<span>${c.pages} pp.</span></th>${qs.map((q, k) => {
       const [risk, , ref] = c.cells[q.id], ans = c.brief[q.id]; // the full answer is in the detail panel
       return `<td><button type="button" class="cell" data-r="${r}" data-c="${k}" aria-label="${esc(c.short)}, ${esc(q.label)}" aria-describedby="cell-${r}-${k}"><span class="cell-in" id="cell-${r}-${k}"><span class="ans">${esc(ans)}</span><span class="meta">${dot(risk)}${esc(ref)}</span></span></button></td>`;
     }).join('')}</tr>`).join('')}</tbody></table>`;
