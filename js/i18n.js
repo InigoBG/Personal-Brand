@@ -76,7 +76,7 @@ export const STRINGS = {
     "contact.selected": "Selected — press Ctrl+C / ⌘C",
     "contact.phone": "Phone",
     "contact.cv": "Download CV",
-    "hero.byline": "Agentic Labs: 25+ law firms contacted, 3 concurrent paid pilots.",
+    "hero.byline": "Agentic Labs: 25+ law firms reached, 3 concurrent paid pilots.",
     "about.user.k": "ONTIER Madrid",
     "about.user.h": "The user",
     "about.user.p": "I was the trainee on M&A deals: due diligences of 200–300+ documents, done by 2–4 lawyers over half a week to a week, in Intralinks and Datasite.",
