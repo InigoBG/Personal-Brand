@@ -55,6 +55,7 @@ export const PILOT_USAGE = 'About 20 lawyers took part in the pilots; pilot user
 
 export const PROJECTS = [
   { name: 'Agentic Labs', line: 'Legal AI that drafts SPAs and SHAs from a firm\'s own precedents.', stack: ['Claude Opus', 'Kimi K2', 'TypeScript', 'Postgres', 'AWS'], status: 'Archived' },
+  { name: 'Headroom', line: 'Personal macOS tool for overseeing AI agents: usage limits, and which sessions are working or waiting for my approval. I customised it and added the live session strip and a command-line readout.', stack: ['Swift', 'SwiftUI', 'AppKit', 'Python'], status: 'Personal tool' },
   { name: 'Liftlog', line: 'iOS strength-training app with its own sync backend.', stack: ['SwiftUI', 'SwiftData', 'FastAPI', 'PostgreSQL with row-level security'], status: 'In development' },
   { name: 'Fanout', line: 'iOS app that publishes one video to 13+ platforms at once, with checks before upload and a scheduling backend.', stack: ['SwiftUI', 'Cloudflare Workers (Hono, TypeScript)', 'D1', 'R2', 'OAuth broker with encrypted tokens', 'Scheduled jobs'], status: 'In development' },
   { name: 'Grano', line: 'Nutrition tracker for iPhone and Mac. Local-first, in English, Spanish and French, with a bundled food database.', stack: ['SwiftUI', 'Modular Swift packages', 'Bundled USDA and Ciqual food database', 'iCloud Drive sync'], status: 'In development' },
